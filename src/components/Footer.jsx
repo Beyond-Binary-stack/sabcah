@@ -13,7 +13,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: 'TikTok', href: 'https://www.tiktok.com/@sabcah.online.mark?_r=1&_t=ZS-99HmFX4WoE9' },
+  { name: 'Telegram', href: 'https://t.me/zakarie16' },
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61583070639514' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@sabcah.online.mark' },
+  { name: 'WhatsApp', href: 'https://wa.me/252672338937' },
 ];
 
 export default function Footer() {

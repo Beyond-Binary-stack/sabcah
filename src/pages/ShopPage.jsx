@@ -1,25 +1,7 @@
-import { useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import PageHero from '../components/PageHero';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
-import {
-  Shirt, ShoppingBag, Briefcase, Smartphone, Watch,
-  Home, Sparkles, PenTool, Car, Store, Plus, Search,
-  ArrowRight, Send
-} from 'lucide-react';
-
-const categories = [
-  { name: 'Dharka & Fashion-ka', icon: Shirt, count: '1000+' },
-  { name: 'Kabaha', icon: ShoppingBag, count: '500+' },
-  { name: 'Boorsooyinka', icon: Briefcase, count: '300+' },
-  { name: 'Electronics', icon: Smartphone, count: '800+' },
-  { name: 'Accessories', icon: Watch, count: '600+' },
-  { name: 'Alaabta Guriga', icon: Home, count: '400+' },
-  { name: 'Beauty & Personal Care', icon: Sparkles, count: '350+' },
-  { name: 'Office & School Supplies', icon: PenTool, count: '250+' },
-  { name: 'Car Accessories', icon: Car, count: '200+' },
-  { name: 'Alaabooyinka Ganacsiga', icon: Store, count: '150+' },
-];
+import { ArrowRight, Send } from 'lucide-react';
 
 const platforms = [
   { name: 'Alibaba', img: '/brands/alibaba.png', bg: 'bg-[#FF6A00]' },
@@ -33,10 +15,60 @@ const platforms = [
 ];
 
 export default function ShopPage() {
-  const [activeCategory, setActiveCategory] = useState(null);
-  const [categoriesRef, categoriesInView] = useInView({ threshold: 0.1 });
   const [platformsRef, platformsInView] = useInView({ threshold: 0.1 });
   const [ctaRef, ctaInView] = useInView({ threshold: 0.2 });
+  const [collectionsRef, collectionsInView] = useInView({ threshold: 0.1 });
+
+  const collections = [
+    {
+      title: 'GENERAL PRODUCTS',
+      image: '/shop_images/genral.png',
+      source: '1688 + Alibaba',
+      products: ['Watches', 'Shoes', 'Jewelry', 'Bags', 'Toys', 'Household products']
+    },
+    {
+      title: 'BEAUTY & SKINCARE',
+      image: '/shop_images/BEAUTY & SKINCARE.png',
+      source: 'YesStyle',
+      products: ['Skincare', 'Serums', 'Cosmetics', 'Cleansers', 'Makeup', 'Beauty tools']
+    },
+    {
+      title: 'SUPPLEMENTS & NUTRITION',
+      image: '/shop_images/SUPPLEMENTS & NUTRITION.png',
+      source: 'iHerb',
+      products: ['Protein', 'Nutrition products', 'Vitamins', 'Minerals', 'Wellness items', 'Sports nutrition']
+    },
+    {
+      title: 'ELECTRONICS & GADGETS',
+      image: '/shop_images/ELECTRONICS & GADGETS.png',
+      source: 'Amazon',
+      products: ['Headphones', 'Laptops', 'Earbuds', 'Smartwatches', 'Cameras', 'Computer accessories']
+    },
+    {
+      title: 'FASHION & CLOTHING',
+      image: '/shop_images/FASHION & CLOTHING.png',
+      source: 'SHEIN',
+      products: ["Women's clothing", 'Shoes', "Men's clothing", "Children's clothing", 'Bags', 'Fashion accessories']
+    },
+    {
+      title: 'RETAIL PRODUCTS',
+      image: '/shop_images/RETAIL PRODUCTS.png',
+      source: 'AliExpress',
+      products: ['Phone accessories', 'Shoes', 'Gadgets', 'Jewelry', 'Beauty products', 'Home products']
+    },
+    {
+      title: 'HOME & LIFESTYLE',
+      image: '/shop_images/HOME & LIFESTYLE.png',
+      source: 'Joom',
+      products: ['Kitchen items', 'Daily-use items', 'Home décor', 'Storage', 'Lighting', 'Lifestyle gadgets']
+    },
+    {
+      title: 'WHOLESALE & BUSINESS ORDERS',
+      image: '/shop_images/WHOLESALE & BUSINESS ORDERS.png',
+      source: 'Alibaba + 1688',
+      products: ['Bulk clothing', 'Bulk electronics', 'Bulk shoes', 'Bulk bags', 'Business supplies', 'Custom orders']
+    }
+  ];
 
   return (
     <div className="pt-20">
@@ -48,72 +80,52 @@ export default function ShopPage() {
         alt="SABCAH products catalogue"
       />
 
-      {/* Categories */}
-      <section id="categories" className="section-padding bg-white">
+      {/* Product Collections */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div ref={categoriesRef} className={`text-center mb-16 transition-all duration-700 ${categoriesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="section-label justify-center">CATEGORIES</p>
-            <h2 className="text-display text-navy-900">Nooca Alaabta <span className="text-accent-500">Aad Rabto</span></h2>
-            <p className="mt-4 text-navy-500 max-w-lg mx-auto">
-              Dooro nooca alaabta aad rabto. Waxaan kuu soo dalbannaa meel kasta
-            </p>
+          <div ref={collectionsRef} className={`text-center mb-12 transition-all duration-700 ${collectionsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className="section-label justify-center">PRODUCT COLLECTIONS</p>
+            <h2 className="text-display text-navy-900">Explore Our <span className="text-accent-500">Collections</span></h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-            {categories.map((category, index) => {
-              const Icon = category.icon;
-              const isActive = activeCategory === category.name;
-              return (
-                <button
-                  key={category.name}
-                  onClick={() => setActiveCategory(isActive ? null : category.name)}
-                  className={`group flex flex-col items-center rounded-2xl p-6 text-center ring-1 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-navy-900 text-white ring-navy-900 shadow-lg -translate-y-1'
-                      : 'bg-white text-navy-700 ring-navy-100/50 hover:bg-navy-50 hover:ring-navy-200 hover:-translate-y-1 hover:shadow-md'
-                  } ${categoriesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-                  style={{ transitionDelay: `${index * 60}ms` }}
-                >
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300 ${
-                    isActive
-                      ? 'bg-white/20 text-white'
-                      : 'bg-navy-50 text-navy-400 group-hover:bg-accent-500 group-hover:text-white group-hover:shadow-lg'
-                  }`}>
-                    <Icon size={26} />
+          <div className={`mb-12 rounded-2xl bg-accent-500 px-6 py-4 text-center transition-all duration-700 ${collectionsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            <p className="text-sm font-semibold text-white">ANY PRODUCT. WE CAN SOURCE IT FOR YOU</p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {collections.map((collection, index) => (
+              <div
+                key={collection.title}
+                className={`group overflow-hidden rounded-3xl bg-white ring-1 ring-navy-100/50 shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ${collectionsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={collection.image}
+                    alt={collection.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-bold text-white">{collection.title}</h3>
+                    <p className="mt-1 text-sm text-white/80">Source marketplace: {collection.source}</p>
                   </div>
-                  <p className={`mt-3 text-sm font-semibold leading-tight transition-colors ${isActive ? 'text-white' : 'text-navy-700 group-hover:text-accent-500'}`}>
-                    {category.name}
-                  </p>
-                  <span className={`mt-1 text-xs font-medium transition-colors ${isActive ? 'text-white/70' : 'text-navy-400'}`}>
-                    {category.count} products
-                  </span>
-                </button>
-              );
-            })}
-
-            <button className={`group flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-navy-200 p-6 text-center transition-all duration-300 hover:border-accent-300 hover:bg-accent-50/50 min-h-[140px] ${categoriesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: `${categories.length * 60}ms` }}>
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-100 text-navy-400 transition-all group-hover:bg-accent-100 group-hover:text-accent-500">
-                <Plus size={26} />
+                </div>
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-2">
+                    {collection.products.map((product) => (
+                      <span
+                        key={product}
+                        className="inline-flex items-center rounded-full bg-navy-50 px-3 py-1.5 text-xs font-medium text-navy-700 transition-colors hover:bg-accent-500 hover:text-white"
+                      >
+                        {product}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <p className="mt-3 text-sm font-medium text-navy-400 group-hover:text-accent-500 transition-colors">
-                Iyo alaabooyin kale oo badan
-              </p>
-            </button>
+            ))}
           </div>
-
-          {activeCategory && (
-            <div className="mt-8 text-center">
-              <div className="inline-flex items-center gap-3 rounded-2xl bg-navy-50/50 px-6 py-4 ring-1 ring-navy-100/50">
-                <span className="text-sm text-navy-600">
-                  Waxaad dooratay: <strong className="text-navy-900">{activeCategory}</strong>
-                </span>
-                <a href={`https://wa.me/252672338937?text=Hi%20SABCAH!%20I%27m%20interested%20in%20${encodeURIComponent(activeCategory)}.`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg bg-accent-500 px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-accent-600">
-                  Dalbo hadda
-                  <ArrowRight size={14} />
-                </a>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 

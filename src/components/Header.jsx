@@ -5,9 +5,9 @@ import WhatsAppIcon from './icons/WhatsAppIcon';
 
 const navLinks = [
   { name: 'Home', href: '/' },
+  { name: 'Shop', href: '/shop' },
   { name: 'Services', href: '/services' },
   { name: 'How It Works', href: '/how-it-works' },
-  { name: 'Shop', href: '/shop' },
   { name: 'About Us', href: '/about' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
