@@ -73,7 +73,7 @@ export default function FaqPage() {
         label="FAQ"
         title="Su'aalaha Badan La Iska Weydiiyo"
         subtitle="Jawaabaha su'aalaha ugu caansan ee ku saabsan adeegyadayada"
-        image="/FAQ page.jpg"
+        image="/FAQ page.webp"
         alt="SABCAH frequently asked questions"
       />
 
@@ -150,7 +150,7 @@ export default function FaqPage() {
               <div className="relative">
                 <div className="absolute -inset-3 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
                 <img
-                  src="/ShIpping Truck.jpeg"
+                  src="/ShIpping Truck.webp"
                   alt="SABCAH support and delivery team"
                   className="relative h-52 w-full object-cover"
                 />

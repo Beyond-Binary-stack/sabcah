@@ -59,7 +59,7 @@ export default function HowItWorks() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
               <img
-                src="/Package.jpeg"
+                src="/Package.webp"
                 alt="SABCAH package ready for delivery"
                 className="relative rounded-[2rem] object-cover w-full aspect-[4/3] ring-1 ring-navy-100/50 shadow-2xl"
               />

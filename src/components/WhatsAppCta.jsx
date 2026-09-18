@@ -25,7 +25,7 @@ export default function WhatsAppCta() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-white/10 blur-2xl" />
               <img
-                src="/pachage2.jpeg"
+                src="/pachage2.webp"
                 alt="SABCAH order being prepared"
                 className="relative rounded-[2rem] object-cover w-full aspect-[4/3] ring-1 ring-white/20 shadow-2xl"
               />

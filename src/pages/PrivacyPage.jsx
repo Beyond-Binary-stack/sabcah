@@ -66,7 +66,7 @@ export default function PrivacyPage() {
       <section ref={heroRef} className="relative overflow-hidden gradient-navy py-28 lg:py-40">
         <div className="absolute inset-0">
           <img
-            src="/Package.jpeg"
+            src="/Package.webp"
             alt="SABCAH privacy and terms"
             className="h-full w-full object-cover"
           />

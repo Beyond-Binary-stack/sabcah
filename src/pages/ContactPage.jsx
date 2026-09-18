@@ -50,7 +50,7 @@ export default function ContactPage() {
       <section ref={heroRef} className="relative overflow-hidden gradient-navy py-28 lg:py-40">
         <div className="absolute inset-0">
           <img
-            src="/pachage2.jpeg"
+            src="/pachage2.webp"
             alt="SABCAH customer support"
             className="h-full w-full object-cover"
           />
@@ -133,7 +133,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-8 overflow-hidden rounded-3xl shadow-lg">
                   <img
-                    src="/pachage2.jpeg"
+                    src="/pachage2.webp"
                     alt="SABCAH orders ready to ship"
                     className="h-52 w-full object-cover"
                   />

@@ -4,14 +4,14 @@ import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 import { ArrowRight, Send } from 'lucide-react';
 
 const platforms = [
-  { name: 'Alibaba', img: '/brands/alibaba.png', bg: 'bg-[#FF6A00]' },
-  { name: '1688', img: '/brands/1688.png', bg: 'bg-[#FF4400]' },
-  { name: 'SHEIN', img: '/brands/shein.png', bg: 'bg-black' },
-  { name: 'YesStyle', img: '/brands/yesstyle.jpg', bg: 'bg-[#E8507A]' },
-  { name: 'Joom', img: '/brands/joom.png', bg: 'bg-[#3D6CFF]' },
-  { name: 'iHerb', img: '/brands/IHerb.png', bg: 'bg-[#3B6E3F]' },
-  { name: 'AliExpress', img: '/brands/ali express.png', bg: 'bg-[#E43225]' },
-  { name: 'Amazon', img: '/brands/amazon.jpg', bg: 'bg-[#FF9900]' },
+  { name: 'Alibaba', img: '/brands/alibaba.webp', bg: 'bg-[#FF6A00]' },
+  { name: '1688', img: '/brands/1688.webp', bg: 'bg-[#FF4400]' },
+  { name: 'SHEIN', img: '/brands/shein.webp', bg: 'bg-black' },
+  { name: 'YesStyle', img: '/brands/yesstyle.webp', bg: 'bg-[#E8507A]' },
+  { name: 'Joom', img: '/brands/joom.webp', bg: 'bg-[#3D6CFF]' },
+  { name: 'iHerb', img: '/brands/IHerb.webp', bg: 'bg-[#3B6E3F]' },
+  { name: 'AliExpress', img: '/brands/ali express.webp', bg: 'bg-[#E43225]' },
+  { name: 'Amazon', img: '/brands/amazon.webp', bg: 'bg-[#FF9900]' },
 ];
 
 export default function ShopPage() {
@@ -22,49 +22,49 @@ export default function ShopPage() {
   const collections = [
     {
       title: 'GENERAL PRODUCTS',
-      image: '/shop_images/genral.png',
+      image: '/shop_images/genral.webp',
       source: '1688 + Alibaba',
       products: ['Watches', 'Shoes', 'Jewelry', 'Bags', 'Toys', 'Household products']
     },
     {
       title: 'BEAUTY & SKINCARE',
-      image: '/shop_images/BEAUTY & SKINCARE.png',
+      image: '/shop_images/BEAUTY & SKINCARE.webp',
       source: 'YesStyle',
       products: ['Skincare', 'Serums', 'Cosmetics', 'Cleansers', 'Makeup', 'Beauty tools']
     },
     {
       title: 'SUPPLEMENTS & NUTRITION',
-      image: '/shop_images/SUPPLEMENTS & NUTRITION.png',
+      image: '/shop_images/SUPPLEMENTS & NUTRITION.webp',
       source: 'iHerb',
       products: ['Protein', 'Nutrition products', 'Vitamins', 'Minerals', 'Wellness items', 'Sports nutrition']
     },
     {
       title: 'ELECTRONICS & GADGETS',
-      image: '/shop_images/ELECTRONICS & GADGETS.png',
+      image: '/shop_images/ELECTRONICS & GADGETS.webp',
       source: 'Amazon',
       products: ['Headphones', 'Laptops', 'Earbuds', 'Smartwatches', 'Cameras', 'Computer accessories']
     },
     {
       title: 'FASHION & CLOTHING',
-      image: '/shop_images/FASHION & CLOTHING.png',
+      image: '/shop_images/FASHION & CLOTHING.webp',
       source: 'SHEIN',
       products: ["Women's clothing", 'Shoes', "Men's clothing", "Children's clothing", 'Bags', 'Fashion accessories']
     },
     {
       title: 'RETAIL PRODUCTS',
-      image: '/shop_images/RETAIL PRODUCTS.png',
+      image: '/shop_images/RETAIL PRODUCTS.webp',
       source: 'AliExpress',
       products: ['Phone accessories', 'Shoes', 'Gadgets', 'Jewelry', 'Beauty products', 'Home products']
     },
     {
       title: 'HOME & LIFESTYLE',
-      image: '/shop_images/HOME & LIFESTYLE.png',
+      image: '/shop_images/HOME & LIFESTYLE.webp',
       source: 'Joom',
       products: ['Kitchen items', 'Daily-use items', 'Home décor', 'Storage', 'Lighting', 'Lifestyle gadgets']
     },
     {
       title: 'WHOLESALE & BUSINESS ORDERS',
-      image: '/shop_images/WHOLESALE & BUSINESS ORDERS.png',
+      image: '/shop_images/WHOLESALE & BUSINESS ORDERS.webp',
       source: 'Alibaba + 1688',
       products: ['Bulk clothing', 'Bulk electronics', 'Bulk shoes', 'Bulk bags', 'Business supplies', 'Custom orders']
     }
@@ -76,7 +76,7 @@ export default function ShopPage() {
         label="ALAABOYINKA"
         title="Alaabooyinka Aan Kaaga Soo Dalbanno"
         subtitle="Waxaan alaabooyin kaaga soo dalbannaa suuqyo online ah iyo suppliers ku kala yaalla China, USA iyo suuqyada caalamiga ah."
-        image="/Shop page.jpg"
+        image="/Shop page.webp"
         alt="SABCAH products catalogue"
       />
 
@@ -199,7 +199,7 @@ export default function ShopPage() {
               <div className="relative">
                 <div className="absolute -inset-3 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
                 <img
-                  src="/pachage2.jpeg"
+                  src="/pachage2.webp"
                   alt="SABCAH order ready to ship"
                   className="relative h-64 w-full object-cover"
                 />

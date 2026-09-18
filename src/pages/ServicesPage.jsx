@@ -92,7 +92,7 @@ export default function ServicesPage() {
         label="ADEEGYADA"
         title="Adeegyadayada"
         subtitle="SABCAH Online Marketing waxay bixisaa adeegyo dhamaystiran oo ku saabsan dalbida, sourcing-ka, iyo keenista alaabooyinka laga soo iibsado suuqyada caalamiga ah."
-        image="/servicesPage.jpg"
+        image="/servicesPage.webp"
         alt="SABCAH online marketing services"
       />
       <div className="relative z-10 -mt-20 mb-0 container-custom">
@@ -259,7 +259,7 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="absolute -inset-3 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
               <img
-                src="/ShIpping Truck.jpeg"
+                src="/ShIpping Truck.webp"
                 alt="SABCAH shipping methods - air and sea delivery"
                 className="relative h-56 w-full object-cover sm:h-72"
               />

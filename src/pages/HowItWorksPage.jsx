@@ -108,7 +108,7 @@ export default function HowItWorksPage() {
         label="HABKA DALBASHADA"
         title="Sida Loo Dalbado"
         subtitle="SABCAH Online Marketing waxay kuu fududaynaysaa habka aad alaab uga dalban karto suuqyada online-ka ah."
-        image="/How It Works page.jpg"
+        image="/How It Works page.webp"
         alt="How to order with SABCAH"
       />
       <div className="relative z-10 -mt-20 mb-0 container-custom">
@@ -130,7 +130,7 @@ export default function HowItWorksPage() {
             <div className="relative">
               <div className="absolute -inset-3 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
               <img
-                src="/Package.jpeg"
+                src="/Package.webp"
                 alt="SABCAH order package"
                 className="relative h-56 w-full object-cover sm:h-72"
               />

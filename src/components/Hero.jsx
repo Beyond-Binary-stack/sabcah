@@ -115,7 +115,7 @@ export default function Hero() {
             <div className="relative mx-auto w-full max-w-sm">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
               <img
-                src="/ShIpping Truck.jpeg"
+                src="/ShIpping Truck.webp"
                 alt="SABCAH shipping truck delivering international orders"
                 className="relative w-full aspect-[3/4] object-cover rounded-[2rem] ring-1 ring-white/10 shadow-2xl"
               />

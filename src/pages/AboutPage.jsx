@@ -73,7 +73,7 @@ export default function AboutPage() {
         label="NAGU SAABSAN"
         title="Nagu Saabsan SABCAH"
         subtitle="SABCAH Online Marketing waa shirkad ku takhasustay dalbida, sourcing-ka iyo keenista alaabooyinka laga soo iibsado suuqyada China, USA iyo dhammaan suuqyada caalamiga ah."
-        image="/About Us page.jpg"
+        image="/About Us page.webp"
         alt="About SABCAH online marketing"
       />
       <div className="relative z-10 -mt-14 mb-0 container-custom">
@@ -228,7 +228,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute -inset-3 rounded-[2.5rem] bg-accent-500/10 blur-2xl" />
               <img
-                src="/servicesPage.jpg"
+                src="/servicesPage.webp"
                 alt="SABCAH serving businesses across Somali territories"
                 className="relative h-56 w-full object-cover sm:h-72"
               />
